@@ -1,0 +1,13 @@
+C:\Users\jacob\source\repos\Carioca\Carioca\bin\Debug\netcoreapp3.1\Carioca.exe
+C:\Users\jacob\source\repos\Carioca\Carioca\bin\Debug\netcoreapp3.1\Carioca.deps.json
+C:\Users\jacob\source\repos\Carioca\Carioca\bin\Debug\netcoreapp3.1\Carioca.runtimeconfig.json
+C:\Users\jacob\source\repos\Carioca\Carioca\bin\Debug\netcoreapp3.1\Carioca.runtimeconfig.dev.json
+C:\Users\jacob\source\repos\Carioca\Carioca\bin\Debug\netcoreapp3.1\Carioca.dll
+C:\Users\jacob\source\repos\Carioca\Carioca\bin\Debug\netcoreapp3.1\Carioca.pdb
+C:\Users\jacob\source\repos\Carioca\Carioca\obj\Debug\netcoreapp3.1\Carioca.csprojAssemblyReference.cache
+C:\Users\jacob\source\repos\Carioca\Carioca\obj\Debug\netcoreapp3.1\Carioca.AssemblyInfoInputs.cache
+C:\Users\jacob\source\repos\Carioca\Carioca\obj\Debug\netcoreapp3.1\Carioca.AssemblyInfo.cs
+C:\Users\jacob\source\repos\Carioca\Carioca\obj\Debug\netcoreapp3.1\Carioca.csproj.CoreCompileInputs.cache
+C:\Users\jacob\source\repos\Carioca\Carioca\obj\Debug\netcoreapp3.1\Carioca.dll
+C:\Users\jacob\source\repos\Carioca\Carioca\obj\Debug\netcoreapp3.1\Carioca.pdb
+C:\Users\jacob\source\repos\Carioca\Carioca\obj\Debug\netcoreapp3.1\Carioca.genruntimeconfig.cache
