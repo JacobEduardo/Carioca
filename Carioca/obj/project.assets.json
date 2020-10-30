@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\jacob\\source\\repos\\Carioca\\Carioca\\Carioca.csproj",
+      "projectUniqueName": "C:\\Users\\jacob\\Documents\\Repos\\Carioca\\Carioca\\Carioca.csproj",
       "projectName": "Carioca",
-      "projectPath": "C:\\Users\\jacob\\source\\repos\\Carioca\\Carioca\\Carioca.csproj",
+      "projectPath": "C:\\Users\\jacob\\Documents\\Repos\\Carioca\\Carioca\\Carioca.csproj",
       "packagesPath": "C:\\Users\\jacob\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\jacob\\source\\repos\\Carioca\\Carioca\\obj\\",
+      "outputPath": "C:\\Users\\jacob\\Documents\\Repos\\Carioca\\Carioca\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\jacob\\AppData\\Roaming\\NuGet\\NuGet.Config",

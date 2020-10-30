@@ -62,9 +62,9 @@ namespace Carioca.Clases
             Cartas.Add(new Card("8", "♣"));
             Cartas.Add(new Card("9", "♣"));
             Cartas.Add(new Card("10", "♣"));
-            Cartas.Add(new Card("J", "♣"));
-            Cartas.Add(new Card("Q", "♣"));
-            Cartas.Add(new Card("K", "♣"));
+            Cartas.Add(new Card("11", "♣"));
+            Cartas.Add(new Card("12", "♣"));
+            Cartas.Add(new Card("13", "♣"));
 
             Cartas.Add(new Card("☺", ""));
             Cartas.Add(new Card("☻", ""));
@@ -121,9 +121,9 @@ namespace Carioca.Clases
             Cartas.Add(new Card("8", "♣"));
             Cartas.Add(new Card("9", "♣"));
             Cartas.Add(new Card("10", "♣"));
-            Cartas.Add(new Card("J", "♣"));
-            Cartas.Add(new Card("Q", "♣"));
-            Cartas.Add(new Card("K", "♣"));
+            Cartas.Add(new Card("11", "♣"));
+            Cartas.Add(new Card("12", "♣"));
+            Cartas.Add(new Card("13", "♣"));
 
             Cartas.Add(new Card("☺", ""));
             Cartas.Add(new Card("☻", ""));

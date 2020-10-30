@@ -1,35 +1,32 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Carioca.Clases
+﻿namespace Carioca.Clases
 {
     public class Card
     {
-        public string name;
+        readonly public string number;
         string pinta;
-        public Card(string name, string pinta)
+        public Card(string number, string pinta)
         {
-            this.name = name;
+            this.number = number;
             this.pinta = pinta;
         }
 
         public override string ToString()
         {
-            if (name=="11"){
+            if (number == "11")
+            {
                 return "|" + "J" + pinta + "|";
             }
-            if (name == "12")
+            if (number == "12")
             {
                 return "|" + "Q" + pinta + "|";
             }
-            if (name == "13")
+            if (number == "13")
             {
                 return "|" + "K" + pinta + "|";
             }
             else
             {
-                string str = "|" + name + pinta + "|";
+                string str = "|" + number + pinta + "|";
                 return str;
             }
         }

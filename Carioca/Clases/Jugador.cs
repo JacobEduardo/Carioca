@@ -9,7 +9,7 @@ namespace Carioca.Clases
     {
         readonly string name;
         public List<Card> mano;
-        public List<Group> groups;
+        public List<Group> groups = new List<Group>();
 
         public Jugador(string name)
         {
@@ -18,21 +18,40 @@ namespace Carioca.Clases
         }
         public void Jugar2Trios()
         {
-            
+            OrdenarCartas();
         }
         public void OrdenarCartas()
         {
-            
-            for (int i = 0; i < 13; i++)
+            Card card;
+            for (int i = 0; i < mano.Count; i++)
             {
-                Card card;
                 List<Card> cards = new List<Card>();
-                if ( mano[i].name.ToString().Equals(i.ToString())){
-                    card = mano[i];
-                    cards.Add(card);
+
+                for (int k = 1; k <= 13; k++)
+                {
+                    if (mano[i].number.ToString().Equals(k.ToString()))
+                    {
+                        card = mano[i];
+                        cards.Add(card);
+                        Console.WriteLine("pase por aca  " + mano[i] + " " + card.ToString() );
+                    }
+                }
+                if (cards.Count > 0) {
+                    groups.Add(new Group("trio", 1, cards));
+                }
+            }
+
+            for (int i = 0; i < groups.Count; i++)
+            {
+                Console.WriteLine("1236666");
+                for (int k = 0; k < groups[i].group.Count; k++)
+                {
+                    groups[i].group[k].ToString();
+                    Console.WriteLine("123");
                 }
             }
         }
+
         public void Bajarse()
         {
 

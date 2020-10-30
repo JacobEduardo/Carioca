@@ -16,7 +16,7 @@ namespace Carioca.Clases
             this.comida = comida;
         }
 
-        public void ImprimirComida ()
+        /*public void ImprimirComida ()
         {
             for (int i = 0; i < comida.Count; i++)
             {
@@ -24,7 +24,7 @@ namespace Carioca.Clases
             }
             Console.WriteLine("");
             Console.WriteLine("");
-        }
+        }*/
 
         public void ImprimirBasura()
         {

@@ -7,14 +7,19 @@ namespace Carioca.Clases
     public class Group
     {
         string name;
-        int quantity;
-        List<Card> group = new List<Card>();
+        int quantity = 0;
+        public List<Card> group = new List<Card>();
 
         public Group(string name, int quantity, List<Card> group)
         {
             this.name = name;
             this.quantity = quantity;
             this.group = group;
+        }
+
+        public void AumentarQuantity()
+        {
+            this.quantity = quantity + 1;
         }
     }
 
