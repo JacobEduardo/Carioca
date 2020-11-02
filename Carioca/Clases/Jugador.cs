@@ -11,19 +11,18 @@ namespace Carioca.Clases
         readonly string name;
         public List<Card> mano;
         public List<Group> groups = new List<Group>();
-
         public Jugador(string name)
         {
             mano = new List<Card>();
             this.name = name;
         }
-
-        public void Jugar2Trios()
+        public void Bajarse(int trios, int scale)
         {
-            BuscarRepetidas();
+            List<Group> _groups = groups.Where(groups => groups.name.Equals("trio")&&groups.quantity > 2).ToList();
+            _groups[0].ImprGroup();
+            _groups[1].ImprGroup();
         }
-
-        private Boolean CheckTrios(int trios)
+        public Boolean CheckTrios(int trios)
         {
             var contador = 0; 
             for (int i = 0; i < groups.Count; i++)
@@ -62,6 +61,7 @@ namespace Carioca.Clases
                         Console.WriteLine("pase por aca  " + mano[i] + " " + card.ToString());
                     }
                 }
+                if(cards.Count > 1)
                 CrearGroup(cards);
             }
             Agrupar();
@@ -71,19 +71,15 @@ namespace Carioca.Clases
             if (cards.Count > 0)
             {
                 groups.Add(new Group("trio", cards));
-                for (int i = 0; i < cards.Count; i++)
-                {
-                    groups.Last().AumentarQuantity();
-                }
             }
         }
         public void Agrupar() { 
 
             for (int i = 0; i < groups.Count; i++)
             {
-                for (int k = 0; k < groups[i].group.Count; k++)
+                for (int k = 0; k < groups[i].cards.Count; k++)
                 {
-                    Console.Write(groups[i].group[k].ToString() + " ");
+                    Console.Write(groups[i].cards[k].ToString() + " ");
                 }
                 groups[i].imprQuantity();
                 Console.Write(" ");
@@ -100,6 +96,17 @@ namespace Carioca.Clases
             }
             Console.WriteLine("");
             Console.WriteLine("");
+        }
+        public void RemoveCard(Card card)
+        {
+            mano.Single;
+            while () { 
+            for (int i = 0; i < mano.Count; i++)
+            {
+
+            }
+            }
+
         }
     }
 }

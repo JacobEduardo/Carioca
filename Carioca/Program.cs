@@ -19,8 +19,15 @@ namespace Carioca
             jugador2.ImprimirMano();
 
             jugador1.mano.Add(mazo.Dar());
-            jugador1.Jugar2Trios();
-
+            jugador1.mano.Add(mazo.Dar());
+            jugador1.mano.Add(mazo.Dar());
+            jugador1.mano.Add(mazo.Dar());
+            jugador1.BuscarRepetidas();
+            if (jugador1.CheckTrios(2))
+            {
+                jugador1.Bajarse(2,0);
+            }
+            jugador1.ImprimirMano();
 
         }
 
