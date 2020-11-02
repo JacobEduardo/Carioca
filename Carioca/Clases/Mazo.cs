@@ -1,13 +1,14 @@
 ﻿using Carioca.Clases;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Carioca.Clases
 {
     public class Mazo
     {
         public List<Card> Cartas = new List<Card>();
-        
+        public List<Card> basura = new List<Card>();
         public Mazo()
         {
             Cartas.Add(new Card("1","♥"));
@@ -146,6 +147,11 @@ namespace Carioca.Clases
                 mano.Add(Dar());
             }
             return mano;
+        }
+
+        public void ImprimirBasura()
+        {
+            Console.WriteLine(basura.Last().ToString());
         }
 
     }

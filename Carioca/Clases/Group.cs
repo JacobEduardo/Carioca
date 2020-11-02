@@ -6,14 +6,13 @@ namespace Carioca.Clases
 {
     public class Group
     {
-        string name;
-        int quantity = 0;
+        public string name;
+        public int quantity = 0;
         public List<Card> group = new List<Card>();
 
-        public Group(string name, int quantity, List<Card> group)
+        public Group(string name, List<Card> group)
         {
             this.name = name;
-            this.quantity = quantity;
             this.group = group;
         }
 
@@ -21,43 +20,33 @@ namespace Carioca.Clases
         {
             this.quantity = quantity + 1;
         }
-    }
-
-    public class Trio
-    {
-        List<Card> trio;
-
-        public Trio(Card one, Card two, Card three)
+        public void imprQuantity()
         {
-            trio.Add(one);
-            trio.Add(two);
-            trio.Add(three);
+            Console.Write(quantity.ToString() );
+        }
+        public void imprName()
+        {
+            Console.Write(name);
         }
 
-        public void AddLetter(Card letter)
+        public void ImprGroup()
         {
-            trio.Add(letter);
-        }
-
-    }
-
-    public class Scale
-    {
-        List<Card> scale;
-
-        public Scale(Card one, Card two, Card three, Card four)
-        {
-            scale.Add(one);
-            scale.Add(two);
-            scale.Add(three);
-            scale.Add(four);
-        }
-
-        public void AddCarta(Card card)
-        {
-            scale.Add(card);
+            for (int i = 0; i < group.Count; i++)
+            {
+                for (int k = 0; k < group.Count; k++)
+                {
+                    Console.Write(group[k].ToString() + " ");
+                    AumentarQuantity();
+                }
+                imprQuantity();
+                Console.Write(" ");
+                imprName();
+                Console.WriteLine("");
+            }
         }
 
     }
+
+   
 
 }

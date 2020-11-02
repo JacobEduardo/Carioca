@@ -18,12 +18,12 @@ namespace Carioca
             jugador2.mano = mazo.Repartir();
             jugador2.ImprimirMano();
 
-            Mesa mesa = new Mesa(mazo.Dar(),mazo.Cartas);
-
-            mesa.ImprimirBasura();
-
+            jugador1.mano.Add(mazo.Dar());
             jugador1.Jugar2Trios();
+
+
         }
+
     }
 }
 
