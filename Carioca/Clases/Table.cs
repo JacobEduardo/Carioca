@@ -9,7 +9,6 @@ namespace Carioca.Clases
         List<Trio> trios;
         List<Scale> scales;
 
-
         public Table()
         {
             trios = new List<Trio>();
@@ -26,6 +25,11 @@ namespace Carioca.Clases
             Scale scale = new Scale(one, two, Three, four);
             scales.Add(scale);
         }
+
+        public void ImprTable()
+        {
+            trios.ForEach(t => t.ImprTrio());
+        }
     }
     class Trio
     {
@@ -33,6 +37,7 @@ namespace Carioca.Clases
 
         public Trio(Card one, Card two, Card three)
         {
+            trio = new List<Card>();
             trio.Add(one);
             trio.Add(two);
             trio.Add(three);
@@ -43,6 +48,10 @@ namespace Carioca.Clases
             trio.Add(letter);
         }
 
+        public void ImprTrio()
+        {
+            trio.ForEach(trio => trio.ToString());
+        }
     }
 
     class Scale

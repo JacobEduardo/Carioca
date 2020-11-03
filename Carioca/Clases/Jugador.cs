@@ -1,4 +1,5 @@
 ﻿using Carioca.Clases;
+using Carioca;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -100,12 +101,19 @@ namespace Carioca.Clases
             gruposfiltrados.ForEach(g => g.ImprGroup());
 
             for (int i = 0; i < trios; i++)
+            { 
+            
+            }
+
+            for (int i = 0; i < trios; i++)
             {
                 for (int k = 0; k < 3; k++)
                 {
                     RemoveCard(gruposfiltrados[i].cards[k]);
                 }
+                Program.table.AddTrio(gruposfiltrados[i].cards[0], gruposfiltrados[i].cards[1], gruposfiltrados[i].cards[2]);
             }
+
         }
         public void RemoveCard(Card card)
         {
