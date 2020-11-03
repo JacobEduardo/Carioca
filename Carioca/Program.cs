@@ -19,13 +19,25 @@ namespace Carioca
             jugador2.mano = mazo.Repartir();
             jugador2.ImprimirMano();
 
-            jugador1.Receive(mazo.Dar());
+            jugador1.mano.Add(mazo.Dar());
+            jugador1.mano.Add(mazo.Dar());
+            jugador1.mano.Add(mazo.Dar());
+            jugador1.mano.Add(mazo.Dar());
+            jugador1.mano.Add(mazo.Dar());
+            jugador1.mano.Add(mazo.Dar());
+            jugador1.mano.Add(mazo.Dar());
+            jugador1.mano.Add(mazo.Dar());
+            jugador1.mano.Add(mazo.Dar());
+            jugador1.mano.Add(mazo.Dar());
+            jugador1.mano.Add(mazo.Dar());
+            jugador1.mano.Add(mazo.Dar());
             jugador1.SortCards();
-            if (!jugador1.down)
-                if (jugador1.CheckTrios(2))
-                {
-                    table.AddTrio
-                }
+            if (jugador1.CheckTrios(2))
+            {
+                jugador1.Bajarse(2,0);
+            }
+            jugador1.ImprimirMano();
+
         }
 
     }

@@ -19,7 +19,12 @@ namespace Carioca.Clases
             groups = new List<Group>();
             this.name = name;
         }
-
+        public void Bajarse(int trios, int scale)
+        {
+            List<Group> _groups = groups.Where(groups => groups.name.Equals("trio")&&groups.quantity > 2).ToList();
+            _groups[0].ImprGroup();
+            _groups[1].ImprGroup();
+        }
         public Boolean CheckTrios(int trios)
         {
             var contador = 0; 
@@ -59,7 +64,8 @@ namespace Carioca.Clases
                         Console.WriteLine("pase por aca  " + mano[i] + " " + card.ToString());
                     }
                 }
-                CreateGroup(cards);
+                if(cards.Count > 1)
+                    CreateGroup(cards);
             }
             Agrupar();
         }
@@ -68,19 +74,15 @@ namespace Carioca.Clases
             if (cards.Count > 0)
             {
                 groups.Add(new Group("trio", cards));
-                for (int i = 0; i < cards.Count; i++)
-                {
-                    groups.Last().AumentarQuantity();
-                }
             }
         }
         public void Agrupar() { 
 
             for (int i = 0; i < groups.Count; i++)
             {
-                for (int k = 0; k < groups[i].group.Count; k++)
+                for (int k = 0; k < groups[i].cards.Count; k++)
                 {
-                    Console.Write(groups[i].group[k].ToString() + " ");
+                    Console.Write(groups[i].cards[k].ToString() + " ");
                 }
                 groups[i].imprQuantity();
                 Console.Write(" ");
@@ -103,14 +105,14 @@ namespace Carioca.Clases
             List<Group> gruposfiltrados =  groups.Where(groups => groups.name.Equals("trio")||groups.quantity > 2).ToList();
             for (int i = 0; i < trios; i++)
             {
-                RemuveCard(gruposfiltrados[i].group[2]);
+                RemoveCard(gruposfiltrados[i].cards[2]);
             }
             
         }
-        public Card RemuveCard(Card card)
+        public void RemoveCard(Card card)
         {
-            
-            return car[0];
+
+
         }
     }
 }

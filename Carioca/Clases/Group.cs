@@ -8,14 +8,13 @@ namespace Carioca.Clases
     {
         public string name;
         public int quantity = 0;
-        public List<Card> group = new List<Card>();
-
-        public Group(string name, List<Card> group)
+        public List<Card> cards = new List<Card>();
+        public Group(string name, List<Card> cards)
         {
             this.name = name;
-            this.group = group;
+            quantity = cards.Count;
+            this.cards = cards;
         }
-
         public void AumentarQuantity()
         {
             this.quantity = quantity + 1;
@@ -28,21 +27,18 @@ namespace Carioca.Clases
         {
             Console.Write(name);
         }
-
         public void ImprGroup()
         {
-            for (int i = 0; i < group.Count; i++)
-            {
-                for (int k = 0; k < group.Count; k++)
+            Console.WriteLine("-------------------------------------");
+                for (int k = 0; k < cards.Count; k++)
                 {
-                    Console.Write(group[k].ToString() + " ");
-                    AumentarQuantity();
+                    Console.Write(cards[k].ToString() + " ");
                 }
                 imprQuantity();
                 Console.Write(" ");
                 imprName();
                 Console.WriteLine("");
-            }
+            Console.WriteLine("-------------------------------------");
         }
 
     }
