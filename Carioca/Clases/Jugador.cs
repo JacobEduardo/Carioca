@@ -12,18 +12,12 @@ namespace Carioca.Clases
         public List<Card> mano;
         public List<Group> groups;
         public Boolean down = false;
-
+      
         public Jugador(string name)
         {
             mano = new List<Card>();
             groups = new List<Group>();
             this.name = name;
-        }
-        public void Bajarse(int trios, int scale)
-        {
-            List<Group> _groups = groups.Where(groups => groups.name.Equals("trio")&&groups.quantity > 2).ToList();
-            _groups[0].ImprGroup();
-            _groups[1].ImprGroup();
         }
         public Boolean CheckTrios(int trios)
         {
@@ -102,17 +96,20 @@ namespace Carioca.Clases
         }
         public void GetDown(int trios, int scales)
         {
-            List<Group> gruposfiltrados =  groups.Where(groups => groups.name.Equals("trio")||groups.quantity > 2).ToList();
+            List<Group> gruposfiltrados =  groups.Where(groups => groups.name.Equals("trio")&&groups.quantity > 2).ToList();
+            gruposfiltrados.ForEach(g => g.ImprGroup());
+
             for (int i = 0; i < trios; i++)
             {
-                RemoveCard(gruposfiltrados[i].cards[2]);
+                for (int k = 0; k < 3; k++)
+                {
+                    RemoveCard(gruposfiltrados[i].cards[k]);
+                }
             }
-            
         }
         public void RemoveCard(Card card)
         {
-
-
+            mano.Remove(card);
         }
     }
 }

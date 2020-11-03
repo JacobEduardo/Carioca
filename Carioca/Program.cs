@@ -34,7 +34,7 @@ namespace Carioca
             jugador1.SortCards();
             if (jugador1.CheckTrios(2))
             {
-                jugador1.Bajarse(2,0);
+                jugador1.GetDown(2,0);
             }
             jugador1.ImprimirMano();
 
