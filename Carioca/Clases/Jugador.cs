@@ -10,20 +10,17 @@ namespace Carioca.Clases
     {
         readonly string name;
         public List<Card> mano;
-        public List<Group> groups = new List<Group>();
+        public List<Group> groups;
+        public Boolean down = false;
 
         public Jugador(string name)
         {
             mano = new List<Card>();
+            groups = new List<Group>();
             this.name = name;
         }
 
-        public void Jugar2Trios()
-        {
-            BuscarRepetidas();
-        }
-
-        private Boolean CheckTrios(int trios)
+        public Boolean CheckTrios(int trios)
         {
             var contador = 0; 
             for (int i = 0; i < groups.Count; i++)
@@ -42,12 +39,12 @@ namespace Carioca.Clases
             }
             return false;
         }
-        public void Recibir(Card card)
+        public void Receive(Card card)
         {
             mano.Add(card);
 
         }
-        public void BuscarRepetidas()
+        public void SortCards()
         {
             Card card;
             for (int k = 1; k <= 13; k++)
@@ -62,11 +59,11 @@ namespace Carioca.Clases
                         Console.WriteLine("pase por aca  " + mano[i] + " " + card.ToString());
                     }
                 }
-                CrearGroup(cards);
+                CreateGroup(cards);
             }
             Agrupar();
         }
-        private void CrearGroup(List<Card> cards)
+        private void CreateGroup(List<Card> cards)
         {
             if (cards.Count > 0)
             {
@@ -100,6 +97,20 @@ namespace Carioca.Clases
             }
             Console.WriteLine("");
             Console.WriteLine("");
+        }
+        public void GetDown(int trios, int scales)
+        {
+            List<Group> gruposfiltrados =  groups.Where(groups => groups.name.Equals("trio")||groups.quantity > 2).ToList();
+            for (int i = 0; i < trios; i++)
+            {
+                RemuveCard(gruposfiltrados[i].group[2]);
+            }
+            
+        }
+        public Card RemuveCard(Card card)
+        {
+            
+            return car[0];
         }
     }
 }

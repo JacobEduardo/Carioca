@@ -9,6 +9,7 @@ namespace Carioca.Clases
         List<Trio> trios;
         List<Scale> scales;
 
+
         public Table()
         {
             trios = new List<Trio>();
